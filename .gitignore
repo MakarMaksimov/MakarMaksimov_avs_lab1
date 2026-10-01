@@ -1,0 +1,17 @@
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.config/
+.copilot/
+.gitconfig
+.lesshst
+.oh-my-zsh/
+.profile
+.vscode-server/
+.zprofile
+.zshrc
+.oh-my-zsh/
+
+#Черновики для себя
+commands.txt
