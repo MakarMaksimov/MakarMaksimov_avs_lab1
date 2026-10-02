@@ -105,3 +105,7 @@ ln evening_incident claude_monet/kitchen/incident_copy
 cat claude_monet/kitchen/hot_station/senya_inventory claude_monet/kitchen/cold_station/fedya_inventory > claude_monet/kitchen/total_inventory
 cat claude_monet/staff_room/leva_warning >> evening_incident
 mv claude_monet/staff_room/prank_plan claude_monet/chef_office/senya_explanation
+ls -lR | grep "^-" | grep -v "_copy$" | sort -k5 -n | tail -n 4
+grep -rhEi "сеня|федя" . | grep -vi "Баринов" | sort | head -n 6
+grep -rl "рыб" claude_monet/kitchen/cold_station claude_monet/staff_room/cold_backup | wc -l
+grep -rEi "проверил|оста" hot_station/*_inventory cold_station/*_inventory | tail -n 2 | sort -r
