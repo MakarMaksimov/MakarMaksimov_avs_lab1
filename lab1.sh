@@ -108,4 +108,15 @@ mv claude_monet/staff_room/prank_plan claude_monet/chef_office/senya_explanation
 ls -lR | grep "^-" | grep -v "_copy$" | sort -k5 -n | tail -n 4
 grep -rhEi "сеня|федя" . | grep -vi "Баринов" | sort | head -n 6
 grep -rl "рыб" claude_monet/kitchen/cold_station claude_monet/staff_room/cold_backup | wc -l
-grep -rEi "проверил|оста" hot_station/*_inventory cold_station/*_inventory | tail -n 2 | sort -r
+cd ~/lab0
+tail -q -n 2 claude_monet/kitchen/hot_station/*_inventory claude_monet/kitchen/cold_station/*_inventory | grep -Ei "проверил|оста" | sort -r
+grep -vE "Сеня|Федя" claude_monet/kitchen/total_inventory | sort -r | head -n 3 | wc -w
+ls -lR | grep "^l" | sort -k9 -r
+rm claude_monet/chef_office/barinov_report
+rm claude_monet/chef_office/product_loss
+rm kitchen_work
+rm evening_incident
+rm claude_monet/kitchen/incident_copy
+rm claude_monet/freezer/reserve_list
+rmdir claude_monet/freezer
+rm -r claude_monet/staff_room/cold_backup
